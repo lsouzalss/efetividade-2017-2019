@@ -32,7 +32,7 @@ def main():
 	processos = st.number_input('Indicador Processos (digite um valor entre 0 e 1):')
 	result = ""
 	if st.button('Prever'):
-		result = predict(resultados, produtos_e_servicos, contexto, planejamento, insumos, processos).round(2) * 100
+		result = predict(resultados, produtos_e_servicos, contexto, planejamento, insumos, processos) * 100
 	st.success('O índice de efetividade previsto é de: {}'.format(result))
 	if st.button('Algoritmo e Métricas'):
 		st.write('Framework: Tensorflow/Keras')
